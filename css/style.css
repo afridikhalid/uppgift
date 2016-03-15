@@ -1,0 +1,27 @@
+.head-section{
+    margin-left: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+
+.time {
+    font-size: .7em;
+}
+.md-title {
+    font-size: .9em;
+}
+
+
+md-card-header {
+    background: teal;
+    color: #fff;
+    text-align: center;
+}
+
+.layout-align-start-center layout-row {
+    margin-bottom: 0;
+    display: inline-block;
+}
+
+

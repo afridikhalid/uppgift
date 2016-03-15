@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+
+<body ng-app="ngUppgifts" ng-controller="uppgiftsCtrl">
+   
+     <md-toolbar>
+         <div class="md-toolbar-tools">
+             <p><strong>Dashboard</strong></p>
+         </div>
+         
+     </md-toolbar>
+     
+     
+     
+     <md-content class="md-padding" layout="row" layout-sm="column" layout-xs="column" layout-wrap>
+         
+          <div flex="grow">
+             <div class="head-section">
+                 <span class="md-headline">{{uppgift.name}}</span><br>
+                 <mydate class="time">{{uppgift.time | date:'yyyy-MM-dd HH:mm:ss'}}</mydate>
+             </div>
+             
+         </div>
+          
+          <md-card flex>
+              <md-card-header>
+                  <md-card-header-text>
+                      <span class="md-title">{{uppgift.objects.coffemachine.name}}</span>
+                  </md-card-header-text>
+              </md-card-header>
+           
+              <md-card-content>
+                 <div layout="row">
+                    <div flex>
+                        <p><strong>Location:</strong> </p>
+                    </div>
+                    <div flex>
+                        <p>{{uppgift.objects.coffemachine.location}}</p>
+                    </div>
+                 </div>
+                 <div layout="row">
+                    <div flex>
+                        <p><strong>Coffeelevel:</strong> </p>
+                    </div>
+                    <div flex>
+                        <p>{{uppgift.objects.coffemachine.coffeelevel}}</p>
+                    </div>
+                 </div>
+                 
+                 <div layout="row">
+                    <div flex>
+                        <p><strong>Cups:</strong> </p>
+                    </div>
+                     <div flex>
+                         <p>{{uppgift.objects.coffemachine.cups}}</p>
+                     </div> 
+                 </div>
+                 <div layout="row">
+                     <div flex>
+                         <p><strong>Last Service:</strong></p>
+                     </div>
+                     <div flex>
+                         <p>{{uppgift.objects.coffemachine.lastservice}}</p>
+                     </div>
+                 </div>  
+             </md-card-content>
+          </md-card>
+          
+<!--          card 2-->
+          <md-card flex>
+              <md-card-header>
+                  <md-card-header-text>
+                      <span class="md-title">{{uppgift.objects.office.name}}</span>
+                  </md-card-header-text>
+              </md-card-header>
+           
+              <md-card-content>
+                 <div layout="row">
+                    <div flex>
+                        <p><strong>Location:</strong> </p>
+                    </div>
+                    <div flex>
+                        <p>{{uppgift.objects.office.location}}</p>
+                    </div>
+                 </div>
+                 <div layout="row">
+                    <div flex>
+                        <p><strong>Temperature:</strong> </p>
+                    </div>
+                    <div flex>
+                        <p>{{uppgift.objects.office.temperature}}</p>
+                    </div>
+                 </div>
+                 
+                 <div layout="row">
+                    <div flex>
+                        <p><strong>Humudity:</strong> </p>
+                    </div>
+                     <div flex>
+                         <p>{{uppgift.objects.office.humudity}}</p>
+                     </div> 
+                 </div>
+                 <div layout="row">
+                     <div flex>
+                         <p><strong>co2:</strong></p>
+                     </div>
+                     <div flex>
+                         <p>{{uppgift.objects.office.co2}}</p>
+                     </div>
+                 </div>  
+             </md-card-content>
+          </md-card>
+          
+<!--          card 3-->
+          <md-card flex>
+              <md-card-header>
+                  <md-card-header-text>
+                      <span class="md-title">{{uppgift.objects.plant.name}}</span>
+                  </md-card-header-text>
+              </md-card-header>
+           
+              <md-card-content>
+                 <div layout="row">
+                    <div flex>
+                        <p><strong>Location:</strong> </p>
+                    </div>
+                    <div flex>
+                        <p>{{uppgift.objects.plant.location}}</p>
+                    </div>
+                 </div>
+                 <div layout="row">
+                    <div flex>
+                        <p><strong>Humidity:</strong> </p>
+                    </div>
+                    <div flex>
+                        <p>{{uppgift.objects.plant.humidity}}</p>
+                    </div>
+                 </div>
+                 
+                 <div layout="row">
+                    <div flex>
+                        <p><strong>Cups:</strong> </p>
+                    </div>
+                     <div flex>
+                         <p>{{uppgift.objects.coffemachine.cups}}</p>
+                     </div> 
+                 </div>
+             </md-card-content>
+          </md-card>    
+     </md-content>
+     
+     <md-content class="md-padding" layout="row" layout-align="center center" layout-wrap>
+        
+        <md-card flex="grow">
+             <md-card-header>
+                  <md-card-header-text>
+                      <span class="md-title">{{uppgift.objects.conferancroom.name}}</span>
+                  </md-card-header-text>
+            </md-card-header>
+            
+            <md-card-content>
+                <div layout="column" layout-align="center center">
+                    <div flex="grow">
+                        <p><strong>Location:</strong> </p>
+                    </div>
+                    <div flex="grow">
+                        <p>{{uppgift.objects.conferancroom.location}}, Temp: {{uppgift.objects.conferancroom.temperature}}</p>
+                    </div>
+                 </div>
+            </md-card-content>
+            
+        </md-card>
+         
+     </md-content>
+   
+    
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.js"></script>
+    <script src="node_modules/angular-aria/angular-aria.js"></script>
+    <script src="node_modules/angular-material/angular-material.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="components/uppgifts_ctr.js"></script>
+</body>
+</html>
